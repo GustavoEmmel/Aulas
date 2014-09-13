@@ -8,23 +8,20 @@
  *
  * @author Gustavo
  */
-class Testador {
+class Testador extends Funcionario {
     
-    private float salario;
+    float salario;
     
-    private float salarioMaximo = 2500;
-    private float descontoMaximo = 25;
-    private float descontoMinimo = 15;
+    float salarioMaximo = 2500;
+    float descontoMaximo = 25;
+    float descontoMinimo = 15;
 
     public Testador(float salario) {
         
         this.salario = salario;
         
     }
-    
-    public float calculaDescontos() {
-        Salario s = new Salario(salario, salarioMaximo, descontoMaximo, descontoMinimo);
-        return s.desconto();
-    }
+ 
+
     
 }

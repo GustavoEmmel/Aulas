@@ -8,7 +8,7 @@
  *
  * @author Gustavo
  */
-public class Funcionario {
+public abstract class Funcionario {
     
     private String nome;
     
@@ -18,6 +18,29 @@ public class Funcionario {
     public Funcionario(){
         
     }
-      
     
+    public float calcularDesconto(){
+         if(this.salario > this.salarioMaximo){
+            return this.descontoMaximo;
+        } else {
+            return this.descontoMinimo;
+        }
+    }
+    
+    public void setSalario(float salario){
+        this.salario = salario;
+    }
+    
+     public void setSalarioMaximo(float salario){
+        this.salarioMaximo = salario;
+    }
+    
+    public void setDescontoMaximo(float desc){
+        this.descontoMaximo = desc;
+    }
+    
+    public void setDescontoMinimo(float desc){
+        this.descontoMinimo = desc;
+    }
+     
 }

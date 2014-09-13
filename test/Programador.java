@@ -9,22 +9,14 @@
  * @author Gustavo
  */
 class Programador extends Funcionario {
-
-    private float salario;
+  
+    public Programador(float sal) {
     
-    private float salarioMaximo = 3000;
-    private float descontoMaximo = 20;
-    private float descontoMinimo = 10;
-    
-    public Programador(float salario) {
+        this.setSalario(sal);
+        this.setSalarioMaximo(3000);
+        this.setDescontoMaximo(20);
+        this.setDescontoMinimo(10);
         
-        this.salario = salario;
-        
-    }
-
-    public float calculaDescontos() {
-        Salario s = new Salario(salario, salarioMaximo, descontoMaximo, descontoMinimo);
-        return s.desconto();
     }
     
 }
